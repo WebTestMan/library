@@ -1,12 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="library.js" defer></script>
     <title>Document</title>
 </head>
+
 <body>
-    
+    <div class="container">
+        <header>
+            <h2 class="library-title">Library</h2>
+        </header>
+        <form>
+            <div class="library-input">
+                <div>
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" name="title" placeholder="Title...">
+                </div>
+                <div>
+                    <label for="author">Author:</label>
+                    <input type="text" id="author" name="author" placeholder="Author...">
+                </div>
+                <div class="been-read">
+                    <div>
+                        <p>Been read?</p>
+                        <div>
+                            <input type="radio" id="yesRead" name="been_read" value="yes">
+                            <label for="yesRead">Yes!</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="notRead" name="been_read" value="no">
+                            <label for="notRead">Not yet...</label>
+                        </div>
+                    </div>
+                </div>
+                <div><button>Add book</button></div>
+            </div>
+        </form>
+        <div class="library-display"></div>
+    </div>
 </body>
+
 </html>
