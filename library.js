@@ -17,7 +17,12 @@ function addBookToLibrary(title, author, pages) {
 }
 
 function displayLibraryBooks() {
+    console.log(myLibrary);
+    const libraryDisplay = document.querySelector('.library-display');
+    libraryDisplay.innerHTML = '';
+
     myLibrary.forEach(book => {
+
         console.log(book.bookDetails);
         const divElement = document.createElement('div');
         divElement.setAttribute('class', 'library-book');
@@ -35,9 +40,7 @@ function displayLibraryBooks() {
         divElement.appendChild(bookAuthor);
         divElement.appendChild(bookPages);
 
-        const libraryDisplay = document.querySelector('.library-display');
         libraryDisplay.appendChild(divElement);
-
     });
 }
 
