@@ -14,6 +14,7 @@
         <header>
             <h1 class="library-title">Your Local Library</h1>
         </header>
+
         <form id="new-book-form">
             <h2>Add New Book</h2>
             <div class="library-input">
@@ -29,22 +30,24 @@
                     <label for="pages">Pages:</label>
                     <input type="number" id="pages" name="pages" placeholder="123..">
                 </div>
-                <div class="been-read">
+
                     <div>
                         <p>Been read?</p>
-                        <div>
-                            <input type="radio" id="yesRead" name="been_read" value="yes">
-                            <label for="yesRead">Yes!</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="notRead" name="been_read" value="no">
-                            <label for="notRead">Not yet...</label>
-                        </div>
                     </div>
-                </div>
+
+                    <div>
+                        <input type="radio" id="yesRead" name="been_read" value="yes">
+                        <label for="yesRead">Yes!</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="notRead" name="been_read" value="no">
+                        <label for="notRead">Not yet...</label>
+                    </div>
+
                 <div><button type="submit">Add Book</button></div>
             </div>
         </form>
+
         <div class="library-display"></div>
     </div>
 </body>
