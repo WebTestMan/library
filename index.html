@@ -12,9 +12,10 @@
 <body>
     <div class="container">
         <header>
-            <h2 class="library-title">Library</h2>
+            <h1 class="library-title">Your Local Library</h1>
         </header>
-        <form>
+        <form id="new-book-form">
+            <h2>Add New Book</h2>
             <div class="library-input">
                 <div>
                     <label for="title">Title:</label>
@@ -23,6 +24,10 @@
                 <div>
                     <label for="author">Author:</label>
                     <input type="text" id="author" name="author" placeholder="Author...">
+                </div>
+                <div>
+                    <label for="pages">Pages:</label>
+                    <input type="number" id="pages" name="pages" placeholder="123..">
                 </div>
                 <div class="been-read">
                     <div>
@@ -37,7 +42,7 @@
                         </div>
                     </div>
                 </div>
-                <div><button>Add book</button></div>
+                <div><button type="submit">Add Book</button></div>
             </div>
         </form>
         <div class="library-display"></div>

@@ -1,7 +1,8 @@
 :root {
     --background-color: rgb(240, 237, 141);
     --alt-background-colour: whitesmoke;
-    --text-colour: #03460e ;
+    --text-colour: #03460e;
+    --global-padding: 6px;
 }
 
 * {
@@ -22,6 +23,7 @@ input {
 button {
     border-radius: 8px;
     background-color: var(--alt-background-colour);
+    padding: var(--global-padding);
 }
 
 header {
@@ -44,6 +46,7 @@ form {
 .library-input {
     display: flex;
     flex-direction: column;
+    padding: var(--global-padding);
 }
 
 .been-read {
@@ -57,4 +60,16 @@ form {
     border-radius: 10px;
     min-height: 80px;
     background-color: var(--alt-background-colour);
+}
+
+.library-book {
+    padding: var(--global-padding);
+    background-color: var(--alt-background-colour);
+    color: var(--text-colour);
+}
+
+.library-book h4,
+.library-book p {
+    background-color: var(--alt-background-colour);
+    color: var(--text-colour);
 }
