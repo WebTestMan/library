@@ -9,6 +9,14 @@ function Book(title, author, pages, read) {
     this.pages = pages;
     this.read = read;
     this.id = self.crypto.randomUUID();
+
+    this.changeReadStatus = function () {
+        if (this.read === 'yes') {
+            this.read = 'no'
+        } else {
+            this.read = 'yes'
+        }
+    }
 };
 
 function addBookToLibrary(title, author, pages, read) {
@@ -43,6 +51,15 @@ function displayLibraryBooks() {
         const bookRead = document.createElement('p');
         bookRead.innerText = `Book has been read: ${book.read}`;
         elementArray.push(bookRead);
+
+        const readButton = document.createElement('button');
+        readButton.setAttribute('id', `read-${book.id}`)
+        readButton.innerText = 'Read?'
+        readButton.addEventListener('click', () => {
+            book.changeReadStatus();
+            displayLibraryBooks();
+        });
+        elementArray.push(readButton);
 
         const removeButton = document.createElement('button');
         removeButton.setAttribute('id', `remove-button-${book.id}`);
