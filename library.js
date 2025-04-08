@@ -45,15 +45,16 @@ function displayLibraryBooks() {
         elementArray.push(bookAuthor);
 
         const bookPages = document.createElement('p');
-        bookPages.innerText = `Pages: ${book.bookPages}`;
+        bookPages.innerText = `Pages: ${book.pages}`;
         elementArray.push(bookPages);
 
         const bookRead = document.createElement('p');
-        bookRead.innerText = `Book has been read: ${book.read}`;
+        bookRead.innerText = `Has been read: ${book.read}`;
         elementArray.push(bookRead);
 
         const readButton = document.createElement('button');
-        readButton.setAttribute('id', `read-${book.id}`)
+        readButton.setAttribute('id', `read-${book.id}`);
+        readButton.setAttribute('class', 'book-button');
         readButton.innerText = 'Read?'
         readButton.addEventListener('click', () => {
             book.changeReadStatus();
@@ -61,9 +62,11 @@ function displayLibraryBooks() {
         });
         elementArray.push(readButton);
 
+
         const removeButton = document.createElement('button');
         removeButton.setAttribute('id', `remove-button-${book.id}`);
         removeButton.innerText = "Remove book?";
+        removeButton.setAttribute('class', 'book-button');
         removeButton.addEventListener("click", () => {
             removeBookFromLibrary(book.id);
         });

@@ -3,6 +3,7 @@
     --alt-background-colour: whitesmoke;
     --text-colour: #03460e;
     --global-padding: 6px;
+    --border-radius: 8px;
 }
 
 * {
@@ -21,7 +22,7 @@ input {
 }
 
 button {
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     background-color: var(--alt-background-colour);
     padding: var(--global-padding);
 }
@@ -60,16 +61,30 @@ form {
     border-radius: 10px;
     min-height: 80px;
     background-color: var(--alt-background-colour);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .library-book {
     padding: var(--global-padding);
     background-color: var(--alt-background-colour);
     color: var(--text-colour);
+    border: solid var(--text-colour);
+    border-radius: var(--border-radius);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: max(350px);
 }
 
 .library-book h4,
 .library-book p {
     background-color: var(--alt-background-colour);
     color: var(--text-colour);
+}
+
+.book-button {
+    padding: var(--global-padding);
+    background-color: var(--background-color);
+    color: var(--text-colour);
+    height: max(80px);
 }
