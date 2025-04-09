@@ -30,19 +30,22 @@ button {
 
 header {
     border-bottom: 8px dashed var(--alt-background-colour);
-    grid-area: 1/1/1/3;
+    height: max(100px);
+    /* grid-area: 1/1/1/3; */
 }
 
 form {
-    grid-area: 2/1/2/2;
+    grid-area: 1/1/2/2;
 }
 
 .container {
     background-color: var(--background-color);
     display: grid;
+    resize: both;
+    overflow: auto;
     gap: 12px;
-    grid-template-columns: 2fr 8fr;
-    grid-template-rows: 1fr 6fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 6fr));
+    grid-template-rows: repeat(auto-fill, minmax(100px, 6fr));
 }
 
 .library-input {
@@ -59,7 +62,7 @@ form {
 }
 
 .library-input div p {
-    grid-area: 1 / 1 / 1 / 3;
+    grid-area: 1 / 1 / 1 / 2;
 }
 
 .library-input div button {
@@ -72,13 +75,16 @@ form {
 }
 
 .library-display {
-    grid-area: 2/2/3/3;
+    /* grid-area: 2/2/3/3; */
     border: 4px solid;
     border-radius: 10px;
     min-height: 80px;
     background-color: var(--alt-background-colour);
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    resize: both;
+    gap: 4px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
 }
 
 .library-book {
@@ -87,8 +93,9 @@ form {
     border: solid var(--text-colour);
     border-radius: var(--border-radius);
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    height: max(300px);
+    resize: both;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 90%));
+    grid-template-rows: repeat(auto-fit, minmax(40px, 2fr));
     box-shadow: var(--box-shadow);
 }
 
@@ -102,7 +109,8 @@ form {
     padding: var(--global-padding);
     background-color: var(--background-color);
     color: var(--text-colour);
-    height: max(80px);
+    min-height: 20px;
+    max-height: 100px;
     box-shadow: var(--box-shadow);
     margin: 4px;
 }
